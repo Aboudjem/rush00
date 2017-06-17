@@ -18,12 +18,12 @@ session_start();
     <div class="form_login">
         <h1>Admin</h1>
         <?php
-        print($_SESSION['loggued_on_user']);
+        print("Vous etes <b><span style='color:#f21d5d; font-size:30px;'>".$_SESSION['loggued_on_user']."</span><br>");
         if (!file_exists("private/passwd"))
             file_put_contents("private/passwd", "");
         if($bdd = unserialize(file_get_contents("private/passwd")))
             foreach($bdd as $i => $v)
-                print("Login --> <b>[".$v['login']."]</b> MdP --> <b>[".$v['passwd']."]</b></br>");
+                print("Login --> <b><span style='color:#f21d5d; font-size:30px;'>[".$v['login']."]</b> MdP --> <b>[".$v['passwd']."]</b></span></br>");
                     ?>
             </div>
         </body>
