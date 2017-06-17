@@ -7,12 +7,13 @@
 </head>
 <?php include('./ressources/header.php'); ?>
 <body>
-    <div style="padding: 50px; text-align: center;">
-        <a href="#"><div class="panier">
-            <h3 class="artName" style="position: absolute; left: 10px; top: 20%;">Book</h3>
-            <span class="tartif" >43€</span><br/>
-            <?php if ($_SESSION["book"]){ ?><span> you have <?php echo $_SESSION["book"]; ?></span><?php } ?>
-        </div></a>
+        <a href="./delone.php?article=book"><div class="panier">
+            <div style="padding: 50px; text-align: center;">
+                <h3 class="artName" style="position: absolute; left: 10px; top: 20%;">Book</h3>
+                <span class="tartif" >43€</span><br/>
+                <?php if ($_SESSION["book"]){ ?><span> you have <?php echo $_SESSION["book"]; ?></span><?php } ?>
+            </div>
+        </a>
     </div>
 </body>
 </html>
