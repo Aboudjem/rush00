@@ -32,8 +32,6 @@ else if ($_POST['name'] == "user")
    include('./tab/delete_user.php'); 
 ?>
 
-<hr>
-<hr>
 
 </body>
 </html>

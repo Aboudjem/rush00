@@ -19,8 +19,8 @@
            echo'<a href="saver.php?article='.$value['name'].'">
                 <div class="articles" style="background-image: url(\'ressources/'.$value['img'].'\') ;background-size:cover;">
 
-                    <div style="padding: 50px; text-align: center; position: relative;">
-                        <h3 class="artName" style="position: absolute; bottom: 10px; margin-right: 25px;">'.$value['name'].'</h3>
+                    <div style="padding: 50px; text-align: center;">
+                        <h3 class="artName" style="position: absolute;all: revert;">'.$value['name'].'</h3>
                         <span class="tarif" >'.$value['price'].' €</span>
                     </div>';
                     if ($_SESSION[$value["name"]]){

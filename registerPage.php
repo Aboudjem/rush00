@@ -13,8 +13,8 @@
             Mot de passe: <input type="password" name="passwd" />
             <input type="submit" value="OK" name="submit" />
         </form>
+    <a href="login.html">Connexion</a><br>
+    <a href="modif.html">Modifier mon mot de passe</a><br>
     </div>
-    <a class='lien' href="login.html">Connexion</a><br>
-    <a class='lien' href="modif.html">Modifier mon mot de passe</a><br>
 </body>
 </html>
