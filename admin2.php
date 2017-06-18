@@ -8,27 +8,33 @@
 <?php include('./ressources/header.php');
 $file = "./private/passwd";
 $user = unserialize(file_get_contents($file));
+$cat = unserialize(file_get_contents("private/cat.csv"));
 $tab = [];
 ?>
 
 <html>
 <body style="margin:auto;">
-<table style="background-color: rgb(35,35,35);" width="70%" class="text" border="1px">
-	<tr>
-    	<td class="tr_admin">
-    		<div class="test">
-		    
-		    <form action='SaveArticle.php' method='post' style="padding-right: 10px;">
-                Categorie<input type='text' name='categorie' value="<?php echo $v['categorie'] ?>"/>
-                Nom<input type='text' name='nom' value="<?php echo $v['nom'] ?>"/>
-                Prix<input type='text' name='prix' value="<?php echo $v['prix'] ?>"/>
-				Stock<input type='text' name='stock' value="<?php echo $v['stock'] ?>"/>
-				<input style="margin-top: 25px; font-size: 30px;" type='submit' name='submit' value='Ajouter'>
-		    </form>
-		    </div>
-    	</td>
-    </tr>
-    </table>
-   <hr>
+    <table style="background-color: rgb(35,35,35);" width="70%" class="text" border="1px">
+       <tr>
+           <td class="tr_admin">
+              <div class="test">
+
+                  <form action='add_article.php' method='post' style="padding-right: 10px;">
+                    Categorie<SELECT name='categorie' size="1">
+                    <?php foreach ($cat as $k => $v) 
+                    echo '<OPTION>'.$cat[$k]['name']; ?>
+                </SELECT>
+                <br>
+                Nom<input type='text' name='name'/>
+                Prix<input type='text' name='price' />
+                Stock<input type='text' name='stock' />
+                Img<input type='text' name='img' />
+                <input style="margin-top: 25px; font-size: 30px;" type='submit' name='submit' value='Ajouter'>
+            </form>
+        </div>
+    </td>
+</tr>
+</table>
+<hr>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?PHP
-if ($_POST['categorie'] != NULL && $_POST['submit'] == "OK")
+if ($_POST['cat'] != NULL && $_POST['submit'] == "OK")
 {
 	if (!file_exists('private/cat.csv'))
 		file_put_contents('private/cat.csv', "");
@@ -8,15 +8,15 @@ if ($_POST['categorie'] != NULL && $_POST['submit'] == "OK")
 	{
 		foreach($cat as $k => $v)
 		{
-			if ($v['categorie'] == $_POST['categorie'])
+			if ($v['name'] == $_POST['cat'])
 			{
 				echo "Cette categorie existe deja\n";
-				exit();
+				exit(0);
 			}
 		}
-		$categorie['name'] = $_POST['categorie'];
-		$cat[] = $categorie;
-		file_put_contents("cat.csv", serialize($cat));
 	}
+	$categorie['name'] = $_POST['cat'];
+	$cat[] = $categorie;
+	file_put_contents("private/cat.csv", serialize($cat));
 }
 ?>
