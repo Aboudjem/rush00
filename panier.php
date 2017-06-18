@@ -11,11 +11,13 @@
     <h3>Cliquer pour enlever</h3>
 <?php 
     $article = unserialize(file_get_contents("./private/bdd.csv"));
+    $total = 0;
     
 	if($cat = unserialize(file_get_contents("./private/cat.csv")))
 	foreach ($cat as  $ckey => $cvalue) {
 	   foreach ($article as $key => $value) {
 	       if ($value['categorie'] == $cvalue[name] && $_SESSION[$value["name"]] > 0) {
+			$total += $value['price'];
 			echo '<a href="./delone.php?article='. $value["name"] .'"><div class="panier">
             <div style="padding: 50px; text-align: center;">
                 <h3 class="artName" style="position: absolute; left: 10px; top: 20%;">'.$value["name"].'</h3>
@@ -31,5 +33,8 @@
 		}
 	}
 ?>
+    <span style="color: white; display: block; font-size: 1.2em;">Total : <?php echo $total; ?></span>
+
+    <a href="#"><div style="display: inline-block; background-color: black; color: white;">Archiver la commande</div></a>
 </body>
 </html>
