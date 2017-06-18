@@ -37,7 +37,7 @@ foreach ($user as $k => $v)
     	<td class="tr_admin">
     		<div class="cate">
                 <form action='add_cat.php' method='post' style="padding-right: 10px;">
-                    <span class="name_cat">Nom Categorie </span><input type="text" name="cat">
+                    <span class="name_cat">Ajout Categorie </span><input type="text" name="cat">
 				    <input style="margin-top: 25px; font-size: 20px;" type='submit' name='submit' value='OK'>
                 </form>
 		    </div>
@@ -48,10 +48,10 @@ foreach ($user as $k => $v)
 <table border="1px">
     <tr>
         <td style="height: 50px">
-            <span class="name_cat">Categorie</span>
+            <span style="padding-right: 4px;" class="name_cat">Categorie:</span>
         </td>
         <td>
-            <SELECT style="font-size: 15px; margin-left: 300px;" name='categorie' size="1">
+            <SELECT style="font-size: 20px; margin-left: 240px; width: 150px;" name='categorie' size="1">
             <?php foreach ($cat as $k => $v) 
             echo '<OPTION>'.$cat[$k]['name']; ?>
             </SELECT>  
@@ -90,10 +90,6 @@ foreach ($user as $k => $v)
             <input style="width: 390px; height: 30px;" type='text' name='img' />
         </td>
     </tr>
-    <!-- <tr> -->
-        <!-- <td> -->
-        <!-- </td> -->
-    <!-- </tr> -->
     </form>
 </table>
             <input style="margin-top: 25px; font-size: 30px; display: flex;" type='submit' name='submvalue='Ajouter'>
