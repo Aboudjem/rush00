@@ -2,7 +2,7 @@
 
 include "check_cat.php";
 
-if (check_cat($_POST['categorie']) && $_POST['name'] != NULL && $_POST['price'] != NULL && $_POST['img'] != NULL && $_POST['stock'] && $_POST['submit'] == "Ajouter")
+if ($_POST['name'] != NULL && $_POST['price'] != NULL && $_POST['img'] != NULL && $_POST['stock'] && $_POST['submit'] == "Ajouter")
 {
     if (!file_exists('private/bdd.csv'))
         file_put_contents('private/bdd.csv', "");
