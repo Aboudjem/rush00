@@ -17,5 +17,6 @@
    </div>
    <a class='lien' href="create.html">Créer mon compte</a><br>
    <a class='lien' href="modif.html">Modifier mon mot de passe</a><br>
+   <a class='lien' href="del_user_2.html">Supprimer mon compte</a><br>
 </body>
 </html>

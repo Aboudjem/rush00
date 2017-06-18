@@ -2,7 +2,7 @@
 <?php
 function print_error()
 {
-	echo("ERROR\n");
+	header("Location: index.php");
 	exit(0);
 }
 if (($_POST['submit']) && ($_POST['login']) !== '' && ($_POST['passwd']) !== '')

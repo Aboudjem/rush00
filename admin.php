@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start(); 
+if ($_SESSION['loggued_on_user'] != 'admin')
+  header('Location: index.php');
+?>
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -7,7 +10,6 @@
 </head>
 <?php 
 include('./ressources/header.php');
-
 ?>
 <form action="admin.php" method="POST">
     <select name="name">
