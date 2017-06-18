@@ -25,7 +25,7 @@
 				</a>';
 			}
 			if (!$_SESSION['loggued_on_user'])
-				echo '<h1>Bienvenue sur 42-Market</h1><img src="42.png"><h2>Pour continuer <a href="login.html">loggez-vous</a> ou <a href="register.html">enregistrez-vous.</a></h2></div>';
+				echo '<h1>Bienvenue sur 42-Market</h1><img title="42" style="box-shadow: -1px 2px 5px 1px #986E6D;" src="42.png"><h2>Pour continuer <a href="login.html" style="color: ##986E6D;">loggez-vous</a> ou <a style="color: ##986E6D;"nh href="register.html">enregistrez-vous.</a></h2></div>';
 			?>
 		</body>
 		</html>

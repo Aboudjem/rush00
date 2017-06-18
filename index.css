@@ -1,22 +1,20 @@
 html{
 	font-family: arial;
-
+    background-color: #192231;
 }
 header {
 	font-family: helvetica;
 	height: 70px;
-	background-color: #3fb0ac;
+	background-color: #494E6B;
 	border-width: 0 0 2px 0;
 	border-style: solid;
-	border-color: black;
-	color:#260126;
+	border-color: #986E6D;
+	color:#98878F;
 }
 header, a:hover{
-	color:#dddfd4;
+	color:#986E6D;
 }
-body { 
-
-	background: -webkit-linear-gradient(top, #173e43 0%,#012526 100%);
+body {
 	margin:0;
 }
 .loguser{
@@ -47,6 +45,7 @@ body {
 .form_login {
 	font-size: 20px;
 	text-decoration: none;
+	display: inline-block;
 	position:relative;
 	color:#dddfd4;
 	text-align:center;

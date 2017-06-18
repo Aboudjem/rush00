@@ -6,7 +6,7 @@
 </head>
 <?php include('./ressources/header.php'); ?>
 <body>
-    <div class="form_login">
+    <div class="form_login" style="background-color: rgba(32,33,35, 0.4);">
         <h1>S'inscrire</h1>
         <form action="register.php" method="POST">
             Identifiant: <input type="text" name="login" />
