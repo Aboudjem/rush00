@@ -33,10 +33,10 @@
 	       }
 		}
 	}
-	$_SESSION['commande'] = $commande
+	$_SESSION['commande'] = $commande;
 ?>
     <span style="color: white; display: block; font-size: 1.2em;">Total : <?php echo $total; ?>€</span>
 
-    <a href="#"><div style="display: inline-block; background-color: black; color: white;">Archiver la commande</div></a>
+    <a href="history.php"><div style="display: inline-block; background-color: black; color: white;">Archiver la commande</div></a>
 </body>
 </html>
