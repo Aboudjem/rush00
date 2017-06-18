@@ -18,6 +18,8 @@
 				echo "<a href='logout.php' class='menu-link'>Logout</a>";
          		echo "<a href='#' style='color:white; text-decoration:none; font-size:30px; margin-left:30px;' >".$_SESSION['loggued_on_user']."</a>"; 
         	}
+            if ($_SESSION['log'])
+                print($_SESSION['log']);
         ?>
     </div>
 </header>

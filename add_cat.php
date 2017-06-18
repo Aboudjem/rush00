@@ -10,7 +10,7 @@ if ($_POST['cat'] !== NULL  && !empty(trim($_POST['cat'])) && $_POST['cat'] !== 
 		{
 			if ($v['name'] == $_POST['cat'])
 			{
-				header('Location: admin3.php');
+				header('Location: admin.php');
 				echo "Cette categorie existe deja\n";
 				exit(0);
 			}
@@ -20,5 +20,5 @@ if ($_POST['cat'] !== NULL  && !empty(trim($_POST['cat'])) && $_POST['cat'] !== 
 	$cat[] = $categorie;
 	file_put_contents("./private/cat.csv", serialize($cat));
 }
-header('Location: admin3.php');
+header('Location: admin.php');
 ?>

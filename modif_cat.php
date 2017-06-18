@@ -12,7 +12,7 @@ if ($_POST['oldcat'] !== NULL && $_POST['newcat'] !== NULL &&
 				$cat[$k]['name'] = $_POST['newcat'];
 			else if ($v['name'] === $_POST['newcat'])
 			{
-				header('Location: admin3.php');
+				header('Location: admin.php');
 				echo 'Categorie deja existante';
 				exit();
 			}
@@ -20,5 +20,5 @@ if ($_POST['oldcat'] !== NULL && $_POST['newcat'] !== NULL &&
 	}
 	file_put_contents("./private/cat.csv", serialize($cat));
 }
-header('Location: admin3.php');
+header('Location: admin.php');
 ?>

@@ -10,7 +10,7 @@ include('./ressources/header.php');
 $user = unserialize(file_get_contents("./private/passwd"));
 $cat = unserialize(file_get_contents("./private/cat.csv"));
 ?>
-<form action="admin3.php" method="POST">
+<form action="admin.php" method="POST">
     <select name="name">
         <option value="article">article</option>
         <option value="cat">cat</option>
@@ -35,8 +35,6 @@ else if ($_POST['name'] == "user")
 ?>
 
 <hr>
-
-
 <hr>
 
 </body>

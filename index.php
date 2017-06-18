@@ -18,7 +18,7 @@
 		foreach ($article as $key => $value) {
 			echo '
 			<a href="saver.php?article='.$value['name'].'">
-				<div class="articles">
+				<div class="articles" style="background-image: url("./ressources/'.$value['img'].'")>
 					<div style="padding: 50px; text-align: center;">
 						<h3 class="artName">'.$value['name'].'</h3>
 						<span class="tarif" >'.$value['price'].' €</span>

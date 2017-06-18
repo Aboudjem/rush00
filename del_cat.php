@@ -11,5 +11,5 @@ if ($_POST['cat'] !== NULL && $_POST['submit'] === "Supprimer")
 		file_put_contents("private/cat.csv", serialize($cat));
 	}
 }
-header('Location: admin3.php');
+header('Location: admin.php');
 ?>
