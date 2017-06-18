@@ -7,13 +7,30 @@
 </head>
 <?php include('./ressources/header.php'); ?>
 <body>
-    <a href="saver.php?article=book"><div class="articles">
-        <div style="padding: 50px; text-align: center;">
-            <h3 class="artName">Book</h3>
-            <span class="tartif" >43€</span><br/>
-            <?php if ($_SESSION["book"]){ ?><span> you have <?php echo $_SESSION["book"]; ?></span><?php } ?>
-        </div>
-    </a>
+    <?php 
+        
+	$cat = unserialize(file_get_contents("./private/cat.csv"));
+	$article = unserialize(file_get_contents("./private/bdd.csv"));
+	
+	foreach ($cat as  $ckey => $cvalue) {
+	    echo '<h2>Produits : '.$cvalue[name].'</h2>';
+	   foreach ($article as $key => $value) {
+	       if ($value['categorie'] == $cvalue[name] && $_SESSION[$value["name"]] < $value["stock"]) {
+			echo '<a href="./saver.php?article='. $value["name"] .'"><div class="panier">
+            <div style="padding: 50px; text-align: center;">
+                <h3 class="artName" style="position: absolute; left: 10px; top: 20%;">'.$value["name"].'</h3>
+                <span class="tartif" >'.$value["price"].' €</span><br/>';
+                if ($_SESSION[$value["name"]]){
+                    echo '<span> you have';
+                    echo $_SESSION[$value["name"]];
+                    echo '</span>';
+                }
+                echo '</div></div>
+            </a>';
+	       }
+		}
+	}
+    ?>
 </div>
 </body>
 </html>
