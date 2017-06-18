@@ -2,29 +2,42 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="admin.css">
     <title>Login</title>
 </head>
-<?php include('./ressources/header.php');
-$file = "./private/passwd";
-$user = unserialize(file_get_contents($file));
+<?php 
+include('./ressources/header.php');
+$user = unserialize(file_get_contents("./private/passwd"));
+$cat = unserialize(file_get_contents("./private/cat.csv"));
+?>
+<form action="admin3.php" method="POST">
+    <select name="name">
+    <option value="article">article</option>
+      <option value="cat">cat</option>
+      <option value="user">user</option>
+  </select>
+  <input style="margin-top: 25px; font-size: 20px;" type="submit" name="submit" value="OK">
+</form>
+<?php
+if ($_POST['name'] == "article")
+{
+  include('./tab/add_article.php'); 
+
+}
+else if ($_POST['name'] == "cat")
+{
+ include('./tab/add_cat.php'); 
+ include('./tab/modif_cat.php'); 
+ include('./tab/delete_cat.php'); 
+}
+else if ($_POST['name'] == "user")
+ include('./tab/delete_user.php'); 
 ?>
 
-<html>
-<body style="margin:0;">
-<table style="background-color: rgb(35,35,35);" width="70%" class="text" border="1px">
-	<tr>
-    	<td>
-    		<div class="test">
-		    <p>User:<span class="login"> <?php echo $v['login']?></span></p>
-		    <form action='delete_user.php' method='post' style="padding-right: 10px;">
-				<input type='hidden' name='username' value="<?php echo $v['login'] ?>"/>
-				<input style="margin-top: 25px; font-size: 30px;" type='submit' value='delete'>
-		    </form>
-		    </div>
-    	</td>
-    </tr>
-    </table>
-    <hr>
+<hr>
+
+
+<hr>
+
 </body>
 </html>
