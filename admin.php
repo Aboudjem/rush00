@@ -7,12 +7,7 @@
 </head>
 <?php 
 include('./ressources/header.php');
-if (!(file_exists("./private/passwd")))
-    file_put_contents("./private/passwd", "");
-if (!(file_exists("./private/cat.csv")))
-    file_put_contents("./private/cat.csv", "");
-if (!(file_exists("./private/bdd.csv")))
-    file_put_contents("./private/bdd.csv", "");
+
 ?>
 <form action="admin.php" method="POST">
     <select name="name">
@@ -24,10 +19,7 @@ if (!(file_exists("./private/bdd.csv")))
 </form>
 <?php
 if ($_POST['name'] == "article")
-{
   include('./tab/add_article.php'); 
-
-}
 else if ($_POST['name'] == "cat")
 {
    include('./tab/add_cat.php'); 

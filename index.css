@@ -74,11 +74,8 @@ input, textarea {
 
 .logo, img
 {
-	/*font-family: helvetica;*/
-
 	font-size: 30px;
 	color:#dddfd4;
-	/*padding-top: 10%;*/
 	text-align: center;
 }
 a{
