@@ -1,4 +1,8 @@
 <?php
 session_start();
-$_SESSION['loggued_on_user'] = "";
+if ($_SESSION['loggued_on_user']){
+	$_SESSION = [];
+	session_destroy();
+}
+header('location: index.html');
 ?>
