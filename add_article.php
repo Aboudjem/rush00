@@ -33,11 +33,11 @@ function upload_file($file)
     move_uploaded_file($tmp_name, "ressources/" . $file);
 }
 
-    $file= basename($_FILES['img']['name']);
+$file = basename($_FILES['img']['name']);
 
-    $name = trim($_POST['name']);
-    if (($_POST['categorie']) && check_price($_POST['price']) && check_name($_POST['name'])
-        && check_file($file) && $_POST['stock'] && $_POST['submit'] === "Ajouter")
+$name = trim($_POST['name']);
+if (($_POST['cat']) && check_price($_POST['price']) && check_name($_POST['name'])
+    && check_file($file) && $_POST['stock'] && $_POST['submit'] === "Ajouter")
 {
     if (!file_exists('private/bdd.csv'))
         file_put_contents('private/bdd.csv', "");
@@ -53,9 +53,9 @@ function upload_file($file)
             }
         }
     }
-    if (upload_file($file))
+    upload_file($file);
     $book['img'] = $file;
-    $book['categorie'] = $_POST['categorie'];
+    $book['cat'] = $_POST['cat'];
     $book['name'] = $_POST['name'];
     $book['stock'] = $_POST['stock'];
     $book['price'] = $_POST['price'];

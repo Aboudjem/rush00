@@ -3,7 +3,6 @@ function check_cat($categorie)
 {
 	if (file_exists('private/cat.csv'))
 	{
-
 		$cat = unserialize(file_get_contents('private/cat.csv'));
 		if ($cat && $categorie != NULL && $categorie != "")
 		{
@@ -11,8 +10,8 @@ function check_cat($categorie)
 				if ($v['name'] === $categorie)
 					return (TRUE);
 			}
-			}
 		}
-		return (FALSE);
 	}
+	return (FALSE);
+}
 ?>

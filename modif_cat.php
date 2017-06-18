@@ -4,7 +4,7 @@ if ($_POST['oldcat'] !== NULL && $_POST['newcat'] !== NULL &&
 	$_POST['newcat'] !== "" && $_POST['submit'] === "Modifier"
 	&& file_exists('./private/cat.csv'))
 {
-	$cat = unserialize(file_get_contents('./private/cat.csv'));
+	if($cat = unserialize(file_get_contents('./private/cat.csv')))
 	{
 		foreach($cat as $k => $v)
 		{

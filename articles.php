@@ -9,13 +9,13 @@
 <body>
     <?php 
         
-    $article = unserialize(file_get_contents("./private/bdd.csv"));
     
-	if($cat = unserialize(file_get_contents("./private/cat.csv")))
-	foreach ($cat as  $ckey => $cvalue) {
-	    echo '<h2>Produits : '.$cvalue[name].'</h2>';
+    if($cat = unserialize(file_get_contents("./private/cat.csv")))
+    foreach ($cat as  $ckey => $cvalue) {
+        echo '<h2>Produits : '.$cvalue['name'].'</h2>';
+    if($article = unserialize(file_get_contents("./private/bdd.csv")))
 	   foreach ($article as $key => $value) {
-	       if ($value['categorie'] == $cvalue[name] && $_SESSION[$value["name"]] < $value["stock"]) {
+	       if ($value['cat'] == $cvalue['name'] && $_SESSION[$value["name"]] < $value["stock"]) {
            echo'<a href="saver.php?article='.$value['name'].'">
                 <div class="articles" style="background-image: url(\'ressources/'.$value['img'].'\') ;background-size:cover;">
 
