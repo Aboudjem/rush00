@@ -56,7 +56,7 @@ if (($_POST['cat']) && check_price($_POST['price']) && check_name($_POST['name']
     upload_file($file);
     $book['img'] = $file;
     $book['cat'] = $_POST['cat'];
-    $book['name'] = $_POST['name'];
+    $book['name'] = htmlspecialchars($_POST['name']);
     $book['stock'] = $_POST['stock'];
     $book['price'] = $_POST['price'];
     $bdd[] = $book;

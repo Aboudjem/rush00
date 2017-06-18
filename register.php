@@ -9,7 +9,7 @@ if (($_POST['submit']) && ($_POST['login']) !== '' && ($_POST['passwd']) !== '')
 {
 	if (!file_exists("private"))
 		mkdir("private");
-	$user['login'] = ($_POST['login']);
+	$user['login'] = htmlspecialchars($_POST['login']);
 	$user['passwd'] = (hash(sha224,$_POST['passwd']));
 	if (!file_exists("private/passwd"))
 		file_put_contents("private/passwd", "");
