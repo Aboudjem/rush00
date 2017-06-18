@@ -1,5 +1,5 @@
 .input{
-	width: 40%;
+	/*width: 500px;*/
 }
 .cate {
 	align-items: center;
@@ -7,10 +7,11 @@
 	flex-direction: column;
 }
 .cat_div {
-	display: flex; 
+	margin-left: 100px;
+	/*justify-content: center;*/
+	/*display: flex; */
 	/*flex-direction: row;  */
 	/*padding: 70px 0;*/
-	align-items: center;
 }
 .name_cat {
 	color: white;

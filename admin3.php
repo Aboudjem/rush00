@@ -49,47 +49,53 @@ foreach ($user as $k => $v)
     <tr>
         <td style="height: 50px">
             <span class="name_cat">Categorie</span>
-                <SELECT style="font-size: 15px; margin-left: 300px;" name='categorie' size="1">
-                    <?php foreach ($cat as $k => $v) 
-                    echo '<OPTION>'.$cat[$k]['name']; ?>
-            </SELECT>        
         </td>
-                <form style="display: flex; flex-direction: column;" action='add_article.php' method='post' style="padding-right: 10px;">
+        <td>
+            <SELECT style="font-size: 15px; margin-left: 300px;" name='categorie' size="1">
+            <?php foreach ($cat as $k => $v) 
+            echo '<OPTION>'.$cat[$k]['name']; ?>
+            </SELECT>  
+        </td>
+            <form style="display: flex; flex-direction: column;" action='add_article.php' method='post' style="padding-right: 10px;">
     </tr>
     <tr>
         <td>
-            <div class="cat_div" style="">
-                <span class="name_cat">Nom:</span><input class="input" type='text' name='name'/>
-            </div>
+            <span class="name_cat">Nom: </span>
         </td>
-    </tr>
-    <tr>
         <td>
-            <div class="cat_div">
-                <span class="name_cat">Prix:</span><input class="input" type='text' name='price' />
-            </div>
+            <input style="width: 390px; height: 30px;" type='text' name='name'/>
         </td>
     </tr>
     <tr>
         <td>
-            <div class="cat_div">
-                <span class="name_cat">Stock:</span><input class="input" type='text' name='stock' />
-            </div>
+            <span class="name_cat">Prix: </span>
+        </td>
+        <td>
+            <input style="width: 390px; height: 30px;" type='text' name='price' />
         </td>
     </tr>
     <tr>
         <td>
-            <div class="cat_div">
-                <span class="name_cat">Img:</span><input class="input" type='text' name='img' />
-            </div>
+            <span class="name_cat">Stock: </span>
+        </td>
+        <td>
+            <input style="width: 390px; height: 30px;" type='text' name='stock' />
         </td>
     </tr>
     <tr>
         <td>
-            <input style="margin-top: 25px; font-size: 30px; display: flex;" type='submit' name='submvalue='Ajouter'>
+            <span class="name_cat">Img: </span>
+        </td>
+        <td>
+            <input style="width: 390px; height: 30px;" type='text' name='img' />
         </td>
     </tr>
+    <!-- <tr> -->
+        <!-- <td> -->
+        <!-- </td> -->
+    <!-- </tr> -->
     </form>
 </table>
+            <input style="margin-top: 25px; font-size: 30px; display: flex;" type='submit' name='submvalue='Ajouter'>
 </body>
 </html>
