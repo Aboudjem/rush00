@@ -9,6 +9,6 @@ if (auth($_POST['login'], $_POST['passwd']))
 else
 {	
 	$_SESSION['loggued_on_user'] = NULL;
-	echo("ERROR\n");
+	header('Location: index.php');
 }
 ?>
