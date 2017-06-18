@@ -77,7 +77,12 @@ input, textarea {
 	/*padding-top: 10%;*/
 	text-align: center;
 }
+a{
+    cursor:	pointer;
+	text-decoration: none;
+}
 .articles{
+	text-decoration: inherit;
     position: relative;
     width: 200px;
     height: 200px;
@@ -93,6 +98,7 @@ input, textarea {
 .articles:hover{
     margin: 10px;
     padding: 10px;
+    background-color: rgba(200,200,200,0.8);
 }
 .artName{
     position: relative;
