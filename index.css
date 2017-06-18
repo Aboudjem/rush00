@@ -1,3 +1,7 @@
+html{
+	font-family: arial;
+
+}
 header {
 	font-family: helvetica;
 	height: 70px;
@@ -70,7 +74,7 @@ input, textarea {
 
 .logo, img
 {
-	font-family: helvetica;
+	/*font-family: helvetica;*/
 
 	font-size: 30px;
 	color:#dddfd4;
@@ -103,6 +107,7 @@ a{
 .artName{
     position: relative;
     top: 5px;
+    font-size: 25px;
 }
 .tarif{
     position: absolute;

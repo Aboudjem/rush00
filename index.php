@@ -21,7 +21,7 @@
 				<div class="articles">
 					<div style="padding: 50px; text-align: center;">
 						<h3 class="artName">'.$value['name'].'</h3>
-						<span class="tarif" >'.$value['price'].'</span>
+						<span class="tarif" >'.$value['price'].' €</span>
 					</div>
 				</div>
 			</a>';

@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Magasins</title>
 </head>
+<?php include('./ressources/header.php'); ?>
 <body>
     <a href="saver.php?article=book"><div class="articles">
         <div style="padding: 50px; text-align: center;">
