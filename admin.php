@@ -7,8 +7,12 @@
 </head>
 <?php 
 include('./ressources/header.php');
-$user = unserialize(file_get_contents("./private/passwd"));
-$cat = unserialize(file_get_contents("./private/cat.csv"));
+if (!(file_exists("./private/passwd")))
+    file_put_contents("./private/passwd", "");
+if (!(file_exists("./private/cat.csv")))
+    file_put_contents("./private/cat.csv", "");
+if (!(file_exists("./private/bdd.csv")))
+    file_put_contents("./private/bdd.csv", "");
 ?>
 <form action="admin.php" method="POST">
     <select name="name">

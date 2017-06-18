@@ -20,7 +20,7 @@ if (($_POST['submit']) && ($_POST['login']) !== '' && ($_POST['oldpw']) !== '' &
 				{
 					$check = TRUE;
 					$bdd[$i]['passwd'] = $user['newpw'];
-					header('Location: index.html');
+					header('Location: index.php');
 					file_put_contents("private/passwd", serialize($bdd));
 					echo("OK\n");
 				}

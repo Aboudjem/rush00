@@ -9,9 +9,9 @@
 <body>
     <?php 
         
-	$cat = unserialize(file_get_contents("./private/cat.csv"));
-	$article = unserialize(file_get_contents("./private/bdd.csv"));
-	
+    $article = unserialize(file_get_contents("./private/bdd.csv"));
+    
+	if($cat = unserialize(file_get_contents("./private/cat.csv")))
 	foreach ($cat as  $ckey => $cvalue) {
 	    echo '<h2>Produits : '.$cvalue[name].'</h2>';
 	   foreach ($article as $key => $value) {

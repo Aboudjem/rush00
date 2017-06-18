@@ -19,7 +19,7 @@ if (($_POST['submit']) && ($_POST['login']) !== '' && ($_POST['passwd']) !== '')
 				print_error();
 	$bdd[] = $user;
 	file_put_contents("private/passwd", serialize($bdd));
-	header('Location: index.html');
+	header('Location: index.php');
 	echo ("OK\n");
 }
 else

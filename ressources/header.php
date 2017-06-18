@@ -1,3 +1,13 @@
+<?php
+if (!(file_exists("./private")))
+    mkdir("private");
+if (!(file_exists("./private/passwd")))
+    file_put_contents("./private/passwd", "");
+if (!(file_exists("./private/cat.csv")))
+    file_put_contents("./private/cat.csv", "");
+if (!(file_exists("./private/bdd.csv")))
+    file_put_contents("./private/bdd.csv", "");
+?>
 <htlm>
 <head>
     <link rel="stylesheet" type="text/css" href="index.css">

@@ -10,9 +10,9 @@
 <body>
     <h3>Cliquer pour enlever</h3>
 <?php 
-	$cat = unserialize(file_get_contents("./private/cat.csv"));
-	$article = unserialize(file_get_contents("./private/bdd.csv"));
-	
+    $article = unserialize(file_get_contents("./private/bdd.csv"));
+    
+	if($cat = unserialize(file_get_contents("./private/cat.csv")))
 	foreach ($cat as  $ckey => $cvalue) {
 	   foreach ($article as $key => $value) {
 	       if ($value['categorie'] == $cvalue[name] && $_SESSION[$value["name"]] > 0) {
