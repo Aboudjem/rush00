@@ -1,6 +1,6 @@
 <?php
 session_start();
-print_r($_FILES['img']);
+// print_r($_FILES['img']);
 include "check_cat.php";
 
 function check_price($price)

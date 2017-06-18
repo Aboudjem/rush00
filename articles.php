@@ -16,16 +16,19 @@
 	    echo '<h2>Produits : '.$cvalue[name].'</h2>';
 	   foreach ($article as $key => $value) {
 	       if ($value['categorie'] == $cvalue[name] && $_SESSION[$value["name"]] < $value["stock"]) {
-			echo '<a href="./saver.php?article='. $value["name"] .'"><div class="panier">
-            <div style="padding: 50px; text-align: center;">
-                <h3 class="artName" style="position: absolute; left: 10px; top: 20%;">'.$value["name"].'</h3>
-                <span class="tartif" >'.$value["price"].' €</span><br/>';
-                if ($_SESSION[$value["name"]]){
-                    echo '<span> you have';
+           echo'<a href="saver.php?article='.$value['name'].'">
+                <div class="articles" style="background-image: url(\'ressources/'.$value['img'].'\') ;background-size:cover;">
+
+                    <div style="padding: 50px; text-align: center;">
+                        <h3 class="artName">'.$value['name'].'</h3>
+                        <span class="tarif" >'.$value['price'].' €</span>
+                    </div>';
+                    if ($_SESSION[$value["name"]]){
+                    echo '<span style="position:absolute; left:3px;"> you have';
                     echo $_SESSION[$value["name"]];
                     echo '</span>';
-                }
-                echo '</div></div>
+                    }
+                echo '</div>
             </a>';
 	       }
 		}
