@@ -1,10 +1,4 @@
-<?php session_start(); ?>
-<?php
-function print_error()
-{
-	echo("ERROR\n");
-	exit(0);
-}
+<?php session_start();
 
 if (($_POST['submit']) && ($_POST['login']) !== '' && ($_POST['pw']) !== '')
 {
@@ -15,11 +9,10 @@ if (($_POST['submit']) && ($_POST['login']) !== '' && ($_POST['pw']) !== '')
 	if($bdd = unserialize(file_get_contents("private/passwd")))
 		foreach($bdd as $i => $v)
 			if($v['login'] === $user['login'] && $v['passwd'] === $user['pw'])
-				{
-					unset($bdd[$i]);
-					file_put_contents("private/passwd", serialize($bdd));
-				}
+			{
+				unset($bdd[$i]);
+				file_put_contents("private/passwd", serialize($bdd));
+			}
 		}
-
-			header("Location: index.php");
+		header("Location: index.php");
 		?>
