@@ -1,5 +1,6 @@
 <?php
 echo '<table border="1px">
+    <form style="display: flex; flex-direction: column;" action="add_article.php" method="post" style="padding-right: 10px;"  enctype="multipart/form-data">
 <tr>
     <td style="height: 50px">
         <span style="padding-right: 4px;" class="name_cat">Categorie:</span>
@@ -12,7 +13,6 @@ echo '<table border="1px">
             <?php
             echo '</SELECT>  
     </td>
-    <form style="display: flex; flex-direction: column;" action="add_article.php" method="post" style="padding-right: 10px;">
     </tr>
     <tr>
         <td>
@@ -43,7 +43,7 @@ echo '<table border="1px">
             <span class="name_cat">Img: </span>
         </td>
         <td>
-            <input style="width: 390px; height: 30px;" type="text" name="img" />
+            <input style="width: 390px; height: 30px;" type="file" name="img" />
         </td>
     </tr>
 

@@ -7,9 +7,8 @@
 </head>
 <?php 
 include('./ressources/header.php');
-$file = "./private/passwd";
-$user = unserialize(file_get_contents($file));
-$cat = unserialize(file_get_contents("private/cat.csv"));
+$user = unserialize(file_get_contents("./private/passwd"));
+$cat = unserialize(file_get_contents("./private/cat.csv"));
 ?>
 <form action="admin3.php" method="POST">
     <select name="name">

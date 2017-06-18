@@ -2,7 +2,7 @@
 
 include "check_cat.php";
 
-if ($_POST['name'] != NULL && $_POST['price'] != NULL && $_POST['img'] != NULL && $_POST['stock'] && $_POST['submit'] == "Ajouter")
+if ($_POST['name'] != NULL && $_POST['price'] != NULL && $_POST['stock'] && $_POST['submit'] == "Ajouter")
 {
     if (!file_exists('private/bdd.csv'))
         file_put_contents('private/bdd.csv', "");
@@ -22,7 +22,7 @@ if ($_POST['name'] != NULL && $_POST['price'] != NULL && $_POST['img'] != NULL &
     $book['name'] = $_POST['name'];
     $book['stock'] = $_POST['stock'];
     $book['price'] = $_POST['price'];
-    $book['img'] = $_POST['img'];
+    // $book['img'] = $_POST['img'];
     $bdd[] = $book;
     file_put_contents("private/bdd.csv", serialize($bdd));
 }

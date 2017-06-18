@@ -9,10 +9,7 @@
 $file = "./private/passwd";
 $user = unserialize(file_get_contents($file));
 ?>
-<?php
-foreach ($user as $k => $v)
-{
-	?>
+
 <html>
 <body style="margin:0;">
 <table style="background-color: rgb(35,35,35);" width="70%" class="text" border="1px">
