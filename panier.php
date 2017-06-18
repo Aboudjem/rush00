@@ -18,6 +18,7 @@
 	   foreach ($article as $key => $value) {
 	       if ($value['categorie'] == $cvalue[name] && $_SESSION[$value["name"]] > 0) {
 			$total += $value['price'];
+			$commande[] = $value;
 			echo '<a href="./delone.php?article='. $value["name"] .'"><div class="panier">
             <div style="padding: 50px; text-align: center;">
                 <h3 class="artName" style="position: absolute; left: 10px; top: 20%;">'.$value["name"].'</h3>
@@ -32,6 +33,7 @@
 	       }
 		}
 	}
+	$_SESSION['commande'] = $commande
 ?>
     <span style="color: white; display: block; font-size: 1.2em;">Total : <?php echo $total; ?></span>
 
