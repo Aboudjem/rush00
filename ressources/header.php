@@ -1,3 +1,7 @@
+<htlm>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
 <header>
     <div class="menu">
         <a href="index.php" class='menu-link'>Accueil</a>
@@ -8,3 +12,4 @@
         <?php if ($_SESSION['loggued_on_user']) { ?><a href="#" class='menu-link'><?php echo $_SESSION['loggued_on_user']; ?></a><?php } ?>
     </div>
 </header>
+</htlm>

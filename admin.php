@@ -8,17 +8,16 @@
 <?php include('./ressources/header.php');
 $file = "./private/passwd";
 $user = unserialize(file_get_contents($file));
-$tab = [];
 ?>
 <?php
 foreach ($user as $k => $v)
 {
 	?>
 <html>
-<body style="margin:auto;">
+<body style="margin:0;">
 <table style="background-color: rgb(35,35,35);" width="70%" class="text" border="1px">
 	<tr>
-    	<td class="tr_admin">
+    	<td>
     		<div class="test">
 		    <p>User:<span class="login"> <?php echo $v['login']?></span></p>
 		    <form action='delete_user.php' method='post' style="padding-right: 10px;">

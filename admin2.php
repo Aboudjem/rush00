@@ -6,10 +6,7 @@
     <title>Login</title>
 </head>
 <?php include('./ressources/header.php');
-$file = "./private/passwd";
-$user = unserialize(file_get_contents($file));
 $cat = unserialize(file_get_contents("private/cat.csv"));
-$tab = [];
 ?>
 
 <html>
