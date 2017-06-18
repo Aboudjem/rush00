@@ -15,6 +15,10 @@ body {
 	background: -webkit-linear-gradient(top, #173e43 0%,#012526 100%);
 	margin:0;
  }
+ .loguser{
+ 	/*text-decoration: none;*/
+ 	/*color: white;*/
+ }
 .lien
 {
 	margin: 0 15px 0 15px;

@@ -25,9 +25,6 @@ $user = unserialize(file_get_contents($file));
     	</td>
     </tr>
     </table>
-    <?php
-}
-?>
     <hr>
 </body>
 </html>
